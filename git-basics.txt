@@ -2,3 +2,16 @@ Hi! This is my first repo.
 Data - 30 Jan, 2024
 
 Repo : first-repo
+
+Git Commands:
+
+-> git init - to initialize git in local repo
+-> git add <filename1> <filename2> ... - to add files to staging area
+-> git add . - adds all files in repo to staging area
+-> git status - shows current status of files in the repo
+-> git commit -m "<Commit Message>" - to commit changes to local repo
+-> git push - to push local repo changes to remote(Github) repo
+-> git log - shows log of commits done from most to least recent in order
+
+// Cloning Repo
+-> git clone <https or ssh repo url> - to clone remote repo to local
