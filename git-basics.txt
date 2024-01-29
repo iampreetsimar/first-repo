@@ -3,7 +3,7 @@ Data - 30 Jan, 2024
 
 Repo : first-repo
 
-Git Commands:
+GIT COMMANDS:
 
 -> git init - to initialize git in local repo
 -> git add <filename1> <filename2> ... - to add files to staging area
@@ -13,5 +13,24 @@ Git Commands:
 -> git push - to push local repo changes to remote(Github) repo
 -> git log - shows log of commits done from most to least recent in order
 
-// Cloning Repo
+// CLONING REPO
 -> git clone <https or ssh repo url> - to clone remote repo to local
+
+
+// .gitignore file - ignores files/folders to not be tracked by git
+// RULES
+-> # - adds comment in .gitignore file
+-> *.a - ignore all files with .a extension
+-> *.[oa] - ignore all files woth .a and .o extension
+
+// ignore all files with .a extension except file <lib.a>
+-> *.a
+-> !lib.a
+
+-> todo - ignore all files with name "todo" in current directory as well as any subdirectories
+-> /todo - ignore all files with name "todo" in current directory ONLY!!
+-> test/ - ignore directory named "test"
+-> [0-9] - ignore all files containing digit [0 -9] in its name
+
+// ? - matches a single character
+-> l?b.a - ignore all files with name l?b.a; ? can have any character in its place
