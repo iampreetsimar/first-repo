@@ -85,3 +85,8 @@ GIT COMMANDS:
 
 -> git restore --staged <filename> - restores staged file to unstage version. Works similar to git reset.
                                      Move file from stagin area to modified stage.
+
+// ALIASING (not a command but a feature)
+-> git config --global alias.<customized command name> <git command> - gives an personlized alias name to git 
+                                                                       command globally(for all projects).
+Eg. git config --global alias.unstage 'reset HEAD' - sets 'unstage' as an alias for git reset HEAD commnd.
