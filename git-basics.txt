@@ -34,3 +34,14 @@ GIT COMMANDS:
 
 // ? - matches a single character
 -> l?b.a - ignore all files with name l?b.a; ? can have any character in its place
+
+
+// DELETE FILE(git rm : combination of terminal rm command + git add command)
+-> git rm <filename> - removed file from repo and add removal change to staging area
+-> git rm -f <filename> - Consider we have a file modified currently and we want to delete it using git rm.
+                          This will cause an error because file has some changes in it. Still, if we want to
+                        continue with deletion, use -f(force flag).
+
+// UNSTAGE FILE
+-> git rm --cached <filename> - Consider we have a file in stagin area with some changes. If we want to unstage 
+                                that file so that it goes back being untracked, use --cached flag.
