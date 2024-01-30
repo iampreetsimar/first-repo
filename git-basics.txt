@@ -51,3 +51,11 @@ GIT COMMANDS:
                         want to add(add a new file, add some code) or we want to edit previous commit message,
                         use --amend flag with commit. This replaces the most recent commit with a new one.
                         Works only in local repo. If commit already pushed to remote(Github), won't work.
+
+
+// GIT RESET HEAD
+-> git reset HEAD <filename> - Consider a file having some changes(in modified state) and added to staging area.
+                               If we want to remove it from staging area but should still have the changes(it goes 
+                               back to modifed state), use this command. If the file is new and hasn't been tracked 
+                               yet, this command will move it back to untracked state. Flags available in this 
+                               command: --soft, --mixed, --hard.
