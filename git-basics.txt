@@ -75,3 +75,13 @@ GIT COMMANDS:
                    If changes were stashed from multiple files, changes will be added back to all those files.
                    
 -> git stash clear - clears stash of any changes which were stored and deletes them permanently.
+
+
+// GIT RESTORE
+-> git restore <filename> - restores file to last staging version first. If no staging version present,
+                            restores to last commit version.
+                            If no staging version present, moves file back from modified to unmodified stage and
+                            works similar to git checkout.
+
+-> git restore --staged <filename> - restores staged file to unstage version. Works similar to git reset.
+                                     Move file from stagin area to modified stage.
