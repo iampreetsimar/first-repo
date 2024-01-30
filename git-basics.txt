@@ -59,3 +59,19 @@ GIT COMMANDS:
                                back to modifed state), use this command. If the file is new and hasn't been tracked 
                                yet, this command will move it back to untracked state. Flags available in this 
                                command: --soft, --mixed, --hard.
+
+
+// GIT CHECKOUT
+-> git checkout -- <filename> - reverts file back to its most recet commit and deleted all changes if any present
+                                permanently.
+
+
+// GIT STASH (works on multiple files simulatenously.)
+-> git stash - revers files back to its most recent commit and deletes all changes present if any and stores them in a
+               stash(STACK behind the scenes). If multiple files are opened and have changes, changes from those files
+                will be stashed.
+             
+-> git stash pop - adds changes back to the files which are stored in stash. Changes are popped in LIFO manner.
+                   If changes were stashed from multiple files, changes will be added back to all those files.
+                   
+-> git stash clear - clears stash of any changes which were stored and deletes them permanently.
