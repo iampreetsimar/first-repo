@@ -40,8 +40,14 @@ GIT COMMANDS:
 -> git rm <filename> - removed file from repo and add removal change to staging area
 -> git rm -f <filename> - Consider we have a file modified currently and we want to delete it using git rm.
                           This will cause an error because file has some changes in it. Still, if we want to
-                        continue with deletion, use -f(force flag).
+                          continue with deletion, use -f(force flag).
 
 // UNSTAGE FILE
--> git rm --cached <filename> - Consider we have a file in stagin area with some changes. If we want to unstage 
+-> git rm --cached <filename> - Consider we have a file in staging area with some changes. If we want to unstage 
                                 that file so that it goes back being untracked, use --cached flag.
+
+// UNDO COMMIT(Most recent in local repo)
+-> git commit --amend - Consider we have committed to our local repo but there are some minor changes which we
+                        want to add(add a new file, add some code) or we want to edit previous commit message,
+                        use --amend flag with commit. This replaces the most recent commit with a new one.
+                        Works only in local repo. If commit already pushed to remote(Github), won't work.
