@@ -21,3 +21,15 @@
     This new commit(c8) can access:
     -> c8, c6, c5, c1, c0 - main
     -> c8, c4, c3, c2, c1, c0 - feature
+
+
+// MERGE CONFLICTS
+-> Merge conflicts happen because file/files are changed at the same place(line) and are asked to merge. In this
+   case, git causes a conflict because it does not know which change to accept while merging.
+-> Git gives us option to only accept the current branch, or to only accept the incoming branch change, or
+   accept changes from both the branches.
+-> Usually happen when multiple team members made changes to same file/files and 
+   try to merge their change to the same branch
+
+Following line will demonstrate a conflict b/w main with merge-feature branch:
+
