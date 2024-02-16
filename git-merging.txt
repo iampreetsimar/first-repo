@@ -33,3 +33,4 @@
 
 Following line will demonstrate a conflict b/w main with merge-feature branch:
 
+Demonstrate conflict from MAIN BRANCH
