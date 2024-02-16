@@ -1,0 +1,23 @@
+// MERGING BRANCHES
+-> git merge <branchname> - merges <branchname> with current branch
+
+2 types of merging -
+1. No new commit is added - 
+    Consider two branches "main" and "hotfix". 
+    main commits - c1, c0
+    hotFix commits - c6, c5, c1, c0
+
+    We see that hotFix can access all its own commits and mains' as well. So both have same paths of commits.
+    To merge hotFix changes to main branch, main's pointer will be moved to hotFix's latest commit
+
+2. A new commit is added -
+   Consider two branches "main" and "feature".
+   main commits - c6, c5, c1, c0
+   feature commits - c4, c3, c2, c1, c0
+
+    We see that paths divide from commit c1 for both branches and remain divided. 
+    So both have different paths of commits. To merge feature changes to main branch, a new commit is added in
+    main which contains all changes from feature as well as main branches. 
+    This new commit(c8) can access:
+    -> c8, c6, c5, c1, c0 - main
+    -> c8, c4, c3, c2, c1, c0 - feature
