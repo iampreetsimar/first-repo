@@ -4,3 +4,6 @@
 - downloads the commits that remote has but are missing from local repo
 - updates where remote branches(origin/<branch>) point in local
 
+-- does not change anything about local state i.e., will not update the remote 
+   changes in local file system(local working directory)
+-- to get these remote changes in working directory, use git merge
