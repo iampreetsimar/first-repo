@@ -1,0 +1,6 @@
+// WORKING WITH REMOTES(in this case Github)
+
+1. GIT FETCH
+- downloads the commits that remote has but are missing from local repo
+- updates where remote branches(origin/<branch>) point in local
+
