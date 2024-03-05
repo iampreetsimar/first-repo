@@ -4,3 +4,13 @@
 - downloads the commits that remote has but are missing from local repo
 - updates where remote branches(origin/<branch>) point in local
 
+
+
+
+
+
+2. GIT PULL
+- is a combination of two commands:
+        -> git fetch + git merge
+- fetches changes from remote and merges them so that changes are shown in 
+  local working directory.
