@@ -85,9 +85,22 @@ GIT COMMANDS:
                             works similar to git checkout.
 
 -> git restore --staged <filename> - restores staged file to unstage version. Works similar to git reset.
-                                     Move file from stagin area to modified stage.
+                                     Move file from staging area to modified stage.
 
 // ALIASING (not a command but a feature)
 -> git config --global alias.<customized command name> <git command> - gives an personlized alias name to git 
                                                                        command globally(for all projects).
 Eg. git config --global alias.unstage 'reset HEAD' - sets 'unstage' as an alias for git reset HEAD commnd.
+
+
+// GIT REBASE
+-> git rebase <base-branch> - makes copies of commits of current branch with new hashes and attaches these 
+                              these copies commits to latest commit of the base-branch.
+                            - Helps in rewriting commit history and making it linear.
+                            - Very dangerous command if more than one individual is making changes on an active
+                              branch. So, only use this if tha branch to be rebased is not active.
+                            - Personal Rule: Use rebase if the code has not been pushed to remote even once. If
+                                             it has, don't use rebase and avoid conflicts!!
+
+-> git rebase -i <base-branch> - interactive flag allows to choose which commits to pick or drop for rebasing.
+

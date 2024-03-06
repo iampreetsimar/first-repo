@@ -11,10 +11,6 @@
    changes in local file system(local working directory)
 -- to get these remote changes in working directory, use git merge
 
-
-
-
-
 2. GIT PULL
 - is a combination of two commands:
         -> git fetch + git merge
