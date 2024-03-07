@@ -61,6 +61,20 @@ GIT COMMANDS:
                                yet, this command will move it back to untracked state. Flags available in this 
                                command: --soft, --mixed, --hard.
 
+-> git reset --soft HEAD~<count> - points HEAD pointer to a specific commit. Keeps the changes that have been made
+                                   since the new commit HEAD points to, and keeps those changes in the Index(SA).
+                                   If count is not provided, default value is 1.
+
+-> git reset --mixed HEAD~<count> - points HEAD pointer to a specific commit. Keeps the changes that have been made
+                                    since the new commit HEAD points to, and keeps those changes as UNSTAGED in the
+                                    working directory.
+                                    Default value of flag for reset command is mixed.
+                                    If count is not provided, default value is 1.
+
+-> git reset --hard HEAD~<count> - points HEAD pointer to a specific commit. Discards the changes that have been made
+                                   since the new commit HEAD points to, and deletes those changes from the working 
+                                   directory. If count is not provided, default value is 1.
+
 
 // GIT CHECKOUT
 -> git checkout -- <filename> - reverts file back to its most recet commit and deleted all changes if any present
