@@ -104,3 +104,32 @@ Eg. git config --global alias.unstage 'reset HEAD' - sets 'unstage' as an alias 
 
 -> git rebase -i <base-branch> - interactive flag allows to choose which commits to pick or drop for rebasing.
 
+
+// FORK
+-> Forking a project is useful for Open Source Contributions. Following steps to be followed:
+1. Fork a project from Github  
+      - creates a copy of the project repo in own account
+2. Clone forked repo from own account
+      - creates a local repo for forked project
+      - origin(remote) of main local branch is OG repo's main branch from remote
+      - Any pull in local main will fetch changes from OG repo's main
+      - Can't push changes directly from local main to OG repo's main as we don't have write access
+
+3. Create a feature branch in local
+      - Add any changes to the feature branch
+      - Set pull origin of local feature branch to be local main branch so that this feature branch
+        fetches any changes being added in local main branch which in turn fetches changes from
+        OG repo's main branch
+      - Set push origin of local feature branch to a branch with same name in own forked repo
+      - Any changes is local feature will be pushed to a branch with same name in forked repo in 
+        own account
+
+4. Create a PULL REQUEST
+      - pull request to add changes from forked repo's feature branch to OG repo's main branch
+      - OG repo's maintainer will either allow the merge/ request some changes for merge or deny
+        the merge
+
+-> git remote -v - shows all remotes for fetch and push for current branch
+-> git remote add <custom-origin-name> <custom-origin-url> - sets a custom remote for current branch
+                                                             to fetch and push at the custom url
+
