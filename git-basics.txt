@@ -147,3 +147,14 @@ Eg. git config --global alias.unstage 'reset HEAD' - sets 'unstage' as an alias 
 -> git remote add <custom-origin-name> <custom-origin-url> - sets a custom remote for current branch
                                                              to fetch and push at the custom url
 
+
+// GIT REVERT
+-> git revert <commit id hash> - used to undo a commit/merge with given commit id and preserves commit history.
+                               - does not rewrite commit history like RESET COMMAND, instead, creates a new commit
+                                 which removes the changes of given commit.
+
+-> git revert -m 1 HEAD/<commit id hash> - used to undo a merge commit. -m 1 refers to the branch from which given
+                                           commit changes must be reverted. Since HEAD also points to the merged 
+                                           commit, can use HEAD instead of commit id.
+                                           using git cat-file -p <commit id hash> gives the parent branches for that
+                                           commit.
