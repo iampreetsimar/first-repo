@@ -158,3 +158,15 @@ Eg. git config --global alias.unstage 'reset HEAD' - sets 'unstage' as an alias 
                                            commit, can use HEAD instead of commit id.
                                            using git cat-file -p <commit id hash> gives the parent branches for that
                                            commit.
+
+
+// GIT CHERRY-PICK
+-> git cherry-pick <commit id hash> - used to cherry-pick changes from given commit and create its copy
+                                      in the current branch. By default, git will only apply the changes if 
+                                      current branch does not have the same changes in order to prevent an 
+                                      empty commit.
+            
+
+// GIT REFLOG
+-> git reflog - kind of a ledger. shows the history of actions in the repo. With the information provided,
+                easy to check and undo changes that have been made to the repo using git reset/revert.
