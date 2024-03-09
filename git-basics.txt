@@ -117,6 +117,22 @@ Eg. git config --global alias.unstage 'reset HEAD' - sets 'unstage' as an alias 
                                              it has, don't use rebase and avoid conflicts!!
 
 -> git rebase -i <base-branch> - interactive flag allows to choose which commits to pick or drop for rebasing.
+                               - can re-arrange the order of commits in iteractive window
+                               - can deleting from list of commits in interactive window
+                               - to abort a rebase from interactive window, delete all commits from window 
+                                 and proceed, rebase will give an error.
+                               - in case of conflicts during rebase, can use :
+                                    git add/rm <conflicted files> + git rebase --continue,
+                                    git rebase --skip, to skip conflicted commit,
+                                    git rebase --abort, to abort and get back to state before rebase
+                               - provides following majorly used options:
+                                    1. p, pick - use commit
+                                    2. r, reword - use commit but edit the commit message
+                                    3. e, edit - use commit but stop for amending commit/commit message
+                                    4. s, squash - use commit but meld into previous commit(this commit msg is 
+                                                   merged into previous picked commit msg) 
+                                    5. f, fixup - use commit like 'squash' but discard this commit's msg
+                                    6. d, drop - remove commit
 
 
 // FORK
