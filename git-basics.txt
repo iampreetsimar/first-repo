@@ -186,3 +186,10 @@ Eg. git config --global alias.unstage 'reset HEAD' - sets 'unstage' as an alias 
 // GIT REFLOG
 -> git reflog - kind of a ledger. shows the history of actions in the repo. With the information provided,
                 easy to check and undo changes that have been made to the repo using git reset/revert.
+
+
+// GIT DIFF
+-> git diff <filename> - shows differences b/w unmodified and modified states of the given file.
+-> git diff - shows differences b/w unmodified and modifed states of all files which have any changes.
+-> git diff --staged <filename> - shows differences b/w last committed and staged states of the given file.
+-> git diff <branchname1>..<branchname2> - shows differences b/w two given branches.
